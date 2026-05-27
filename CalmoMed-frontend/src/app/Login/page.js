@@ -1,24 +1,24 @@
-'use client';
-import { Box, VStack, Heading, Text, Button, Image } from "@chakra-ui/react";
-import { useRouter } from "next/navigation";
-import React, { useState } from "react";
-import LoginInput from "@/components/LoginInput";
-import RegisterInput from "@/components/RegisterInput";
+"use client"
+import { Box, VStack, Heading, Text, Button, Image } from "@chakra-ui/react"
+import { useRouter } from "next/navigation"
+import React, { useState } from "react"
+import LoginInput from "@/components/LoginInput"
+import RegisterInput from "@/components/RegisterInput"
 
 export default function LoginPage() {
-  const [isRegistering, setIsRegistering] = useState(false);
-  const router = useRouter();
+  const [isRegistering, setIsRegistering] = useState(false)
+  const router = useRouter()
 
   const registerLogin = (data) => {
-    console.log("Login realizado:", data.email);
-    
-    router.push('/Lobby?tab=mapa');
-  };
+    console.log("Login realizado:", data.email)
+
+    router.push("/Lobby?tab=mapa")
+  }
 
   const registerSuccess = (userData) => {
-    console.log("Cadastro realizado:", userData);
-    setIsRegistering(false);
-  };
+    console.log("Cadastro realizado:", userData)
+    setIsRegistering(false)
+  }
 
   return (
     <Box
@@ -35,10 +35,10 @@ export default function LoginPage() {
       bgPosition="center"
       bgRepeat="no-repeat"
     >
-      <Box 
-        w="50%" 
-        display="flex" 
-        justifyContent="center" 
+      <Box
+        w="50%"
+        display="flex"
+        justifyContent="center"
         alignItems="center"
         position="relative"
         h="100vh"
@@ -96,7 +96,12 @@ export default function LoginPage() {
           minH="350px"
         >
           <VStack spacing={4} align="stretch">
-            <Heading color="white" fontSize={40} fontWeight={800} textAlign="center">
+            <Heading
+              color="white"
+              fontSize={40}
+              fontWeight={800}
+              textAlign="center"
+            >
               Bem Vindo!
             </Heading>
             <Text fontSize="lg" color="white" opacity={0.8} textAlign="center">
@@ -105,7 +110,12 @@ export default function LoginPage() {
             {isRegistering ? (
               <>
                 <RegisterInput onRegister={registerSuccess} />
-                <Button mt={2} colorScheme="gray" variant="solid" onClick={() => setIsRegistering(false)}>
+                <Button
+                  mt={2}
+                  colorScheme="gray"
+                  variant="solid"
+                  onClick={() => setIsRegistering(false)}
+                >
                   Voltar ao Login
                 </Button>
               </>
@@ -118,11 +128,13 @@ export default function LoginPage() {
               color={"teal.300"}
               variant="link"
             >
-              {isRegistering ? "Já tem uma conta? Faça login" : "Não tem uma conta? Cadastre-se"}
+              {isRegistering
+                ? "Já tem uma conta? Faça login"
+                : "Não tem uma conta? Cadastre-se"}
             </Button>
           </VStack>
         </Box>
       </Box>
     </Box>
-  );
+  )
 }

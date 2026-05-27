@@ -38,6 +38,7 @@ yarn dev
 Por padrão, o projeto roda em [http://localhost:3000](http://localhost:3000). Se a porta 3000 estiver ocupada, o Next.js usará outra porta disponível (ex: 41517). O terminal mostrará a URL correta após rodar o comando acima.
 
 Se quiser forçar uma porta específica, rode:
+
 ```bash
 PORT=3000 npm run dev
 ```
@@ -59,6 +60,6 @@ PORT=3000 npm run dev
 - `jsconfig.json`: Configurações do JavaScript para o editor
 
 ### Dicas
+
 - Se encontrar erro de porta ocupada, feche outros servidores locais ou use outra porta.
 - Se aparecer erro de dependência, rode `npm install` novamente.
-
