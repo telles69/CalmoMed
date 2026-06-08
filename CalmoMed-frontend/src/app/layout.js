@@ -1,5 +1,6 @@
 import { Provider } from "@/components/ui/provider";
 import { AuthProvider } from "@/contexts/AuthContext";
+import "@/styles/leaflet.css";
 
 export const metadata = {
   title: "CalmoMed - Sistema de Saúde",

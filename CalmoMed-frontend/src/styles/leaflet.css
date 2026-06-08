@@ -1,0 +1,57 @@
+/* Leaflet styles para integração com Next.js */
+.leaflet-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos customizados para marcadores */
+.leaflet-marker-icon {
+  transition: all 0.2s ease;
+}
+
+.leaflet-marker-icon:hover {
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
+  transform: scale(1.1);
+}
+
+/* Estilos para o controle de zoom */
+.leaflet-bar {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-bar a {
+  background-color: white;
+  color: #333;
+  font-weight: bold;
+}
+
+.leaflet-bar a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .leaflet-popup-content {
+    font-size: 12px;
+  }
+
+  .leaflet-control-zoom {
+    display: flex;
+  }
+}

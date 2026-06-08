@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import FixBar from "@/components/FixBar";
 import Sidebar from "@/components/Sidebar";
-import GoogleMap from "@/components/GoogleMap";
+import LeafletMap from "@/components/LeafletMap";
 import PostosList from "@/components/PostosList";
 import OccupancyStats from "@/components/OccupancyStats";
 import PostoCreate from "@/components/PostoCreate";
@@ -109,7 +109,7 @@ function LobbyContent() {
                     </Box>
 
                     <Box flex="1" borderRadius="xl" overflow="hidden">
-                      <GoogleMap
+                      <LeafletMap
                         center={{ lat: -27.0945, lng: -52.6166 }}
                         zoom={13}
                         height="100%"
